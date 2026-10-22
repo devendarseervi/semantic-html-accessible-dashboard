@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View and manage dashboard records.">
+    <title>Records | Accessible Dashboard</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/main.js" defer></script>
+</head>
+<body>
+    <a href="#main-content">Skip to main content</a>
+
+    <header>
+        <p>Accessible Dashboard</p>
+
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="../index.html">Overview</a></li>
+                <li><a href="records.html" aria-current="page">Records</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="dashboard-layout">
+        <aside aria-label="Sidebar">
+            <nav aria-label="Sidebar navigation">
+                <ul>
+                    <li><a href="../index.html">Dashboard</a></li>
+                    <li><a href="records.html" aria-current="page">Manage Records</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main id="main-content">
+           
+<section aria-labelledby="page-title">
+    <h1 id="page-title">Manage Records</h1>
+    <p>View and manage your records here.</p>
+
+    <div class="table-container">
+        <table>
+            <caption>Dashboard records</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Record ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>REC-001</td>
+                    <td>Sample Record One</td>
+                    <td>Operations</td>
+                    <td>Active</td>
+                </tr>
+                <tr>
+                    <td>REC-002</td>
+                    <td>Sample Record Two</td>
+                    <td>Finance</td>
+                    <td>Pending</td>
+                </tr>
+                <tr>
+                    <td>REC-003</td>
+                    <td>Sample Record Three</td>
+                    <td>Support</td>
+                    <td>Inactive</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<section aria-labelledby="form-title">
+    <h2 id="form-title">Add a Record</h2>
+
+    <form action="#" method="get">
+        <fieldset>
+            <legend>Record Details</legend>
+
+            <div>
+                <label for="record-name">Record name</label>
+                <input
+                    type="text"
+                    id="record-name"
+                    name="recordName"
+                    required
+                    minlength="2"
+                    autocomplete="off"
+                >
+            </div>
+
+            <div>
+                <label for="record-category">Category</label>
+                <select
+                    id="record-category"
+                    name="recordCategory"
+                    required
+                >
+                    <option value="">Select a category</option>
+                    <option value="operations">Operations</option>
+                    <option value="finance">Finance</option>
+                    <option value="support">Support</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="record-status">Status</label>
+                <select id="record-status" name="recordStatus" required>
+                    <option value="">Select a status</option>
+                    <option value="active">Active</option>
+                    <option value="pending">Pending</option>
+                    <option value="inactive">Inactive</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <button type="submit">Submit Record</button>
+    </form>
+
+    
+<button type="button" id="open-dialog">
+    View Record Information
+</button>
+
+<dialog id="record-dialog" aria-labelledby="dialog-title">
+    <h2 id="dialog-title">Record Information</h2>
+
+    <p>This dialog demonstrates an accessible modal interface.</p>
+
+    <button type="button" id="close-dialog">
+        Close dialog
+    </button>
+</dialog>
+
+</section>
+
+
+
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Accessible Dashboard</p>
+    </footer>
+</body>
+</html>
