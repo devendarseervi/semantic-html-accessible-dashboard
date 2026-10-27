@@ -24,16 +24,20 @@ A responsive dashboard foundation built with semantic HTML5, CSS, and JavaScript
 ## Project Structure
 
 ```text
+
 .
 ├── index.html
 ├── pages/
 │   └── records.html
+├── components/
+│   ├── header.html
+│   └── sidebar.html
 ├── css/
 │   └── styles.css
 ├── js/
 │   └── main.js
-├── components/
 └── README.md
+
 ```
 
 ## Getting Started

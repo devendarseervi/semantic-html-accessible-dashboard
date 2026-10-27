@@ -69,7 +69,14 @@ nav a[aria-current="page"] {
     min-height: 70vh;
 }
 
+
+#sidebar-placeholder {
+    min-width: 0;
+}
+
+
 aside {
+    height: 100%;
     padding: 1.5rem;
     background-color: #e7ecf5;
 }
